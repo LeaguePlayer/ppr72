@@ -8391,3 +8391,12 @@ Stack trace:
 REQUEST_URI=/uploads/reviews/no_img.jpg
 HTTP_REFERER=http://ppr72.loc/review
 ---
+2014/04/14 08:06:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "portfolio".' in Z:\home\yiiframework\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\yiiframework\framework\web\CWebApplication.php(141): CWebApplication->runController('portfolio')
+#1 Z:\home\yiiframework\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 Z:\home\ppr72.loc\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portfolio
+HTTP_REFERER=http://ppr72.loc/review/index
+---

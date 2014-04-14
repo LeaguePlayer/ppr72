@@ -73,7 +73,7 @@
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/news')!==false){echo" class='current'";}?>><?=CHtml::link('Новости', array('/news'))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/faq')!==false){echo" class='current'";}?>><?=CHtml::link('Вопросы и ответы', array('/faq'))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/3')!==false){echo" class='current'";}?>><?=CHtml::link('Контакты', array('/notes/view', 'id'=>3))?></li>
-                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/portfolio')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/portfolio'))?></li>
+                    <!--<li<?if(strpos($_SERVER['REQUEST_URI'],'/portfolio')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/portfolio'))?></li>-->
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/reviews')!==false){echo" class='current'";}?>><?=CHtml::link('Отзывы', array('/review'))?></li>
 
                 </ul>
