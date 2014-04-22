@@ -36,7 +36,7 @@
             <div id="logo_text" class="cufon"><div class="relative"><h1>ПроектТехСервис</h1><a href="/"></a></div></div>            
             <div id="callback"><a href="/site/feedback" class="fancy">Связаться с нами</a></div>            
             <div id="slogan" class="cufon">индивидуальный подход и тщательная проработка <span>каждого проекта</span></div>            
-            <div id="phone"><div class="cufon">+7 (9088) <span>73</span><i>-</i><span>88</span><i>-</i><span>15</span></div>г. Тюмень, <br>ул. Станислава Карнацевича<br /> 14 кор.2</div>
+            <div id="phone"><div class="cufon">8-922-074-6770</div>г. Тюмень, <br>ул. Станислава Карнацевича<br /> 14 кор.2</div>
         </div>
         <div id="slide_box">
             <div class="arrow_left"></div>
@@ -70,8 +70,6 @@
                     </li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/4')!==false){echo" class='current'";}?>><?=CHtml::link('Экспертиза ППРк', array('/notes/view', 'id'=>4))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/6')!==false){echo" class='current'";}?>><?=CHtml::link('Сертификаты', array('/notes/view', 'id'=>6))?></li>
-                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/news')!==false){echo" class='current'";}?>><?=CHtml::link('Новости', array('/news'))?></li>
-                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/faq')!==false){echo" class='current'";}?>><?=CHtml::link('Вопросы и ответы', array('/faq'))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/3')!==false){echo" class='current'";}?>><?=CHtml::link('Контакты', array('/notes/view', 'id'=>3))?></li>
                     <!--<li<?if(strpos($_SERVER['REQUEST_URI'],'/portfolio')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/portfolio'))?></li>-->
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/reviews')!==false){echo" class='current'";}?>><?=CHtml::link('Отзывы', array('/review'))?></li>
@@ -103,7 +101,7 @@
    <div class="small_f">
         <div class="small_logo cufon">ПроектТехСервис<span>все права защищены</span></div>
         <div id="copyright"><div id="c"><a href="http://asite-studio.ru" title="Создание сайта А-Сайт Тюмень"></a>Создание сайта</div></div>
-        <div class="fast_phone"><span class="cufon">73-88-15</span>ул. Станислава Карнацевича 14 кор.2 </div>
+        <div class="fast_phone"><span class="cufon">8-922-074-6770</span>ул. Станислава Карнацевича 14 кор.2 </div>
    </div>
    
    </div>

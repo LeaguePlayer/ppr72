@@ -7,6 +7,7 @@ class NotesController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	public $defaultAction = 'view';
 
 	/**
 	 * @return array action filters
@@ -48,7 +49,7 @@ class NotesController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView($id=2)
 	{
 	   $model = $this->loadModel($id);
        

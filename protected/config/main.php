@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'ПроектТехСервис Тюмень',
+	'defaultController' => 'notes',
 
       'sourceLanguage' => 'ru',
    'language' => 'ru',

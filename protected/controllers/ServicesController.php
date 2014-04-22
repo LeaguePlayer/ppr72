@@ -218,7 +218,7 @@ class ServicesController extends Controller
 		}
 	}
     
-    protected function beforeAction()
+    protected function beforeAction($action)
     {
         date_default_timezone_set("Asia/Dhaka");
         return true;        
