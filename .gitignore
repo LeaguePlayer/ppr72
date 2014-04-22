@@ -3,3 +3,4 @@ uploads
 assets
 protected/runtime
 protected/config/main.php
+index.php

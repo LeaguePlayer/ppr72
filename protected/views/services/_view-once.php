@@ -9,6 +9,6 @@
     ?>
     <?if($model->cost){?><div class="part_info">Стоимость услуги: от <strong><?=$model->cost?></strong> руб.</div><?}?>
     <div class="part_info">Товар в наличии: <strong><?echo ($model->presence==1 ? 'Да' : 'Нет')?></strong></div>
-    <div class="part_info"><a class="goods fancy" href="/site/feedback/order/<?=$model->id?>">Закать товар</a></div>
+    <div class="part_info"><a class="goods fancy" href="/site/feedback/order/<?=$model->id?>">Заказать товар</a></div>
 </div>
 <?=$model->full_desc?>

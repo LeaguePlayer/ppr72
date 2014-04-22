@@ -147,7 +147,7 @@ a:hover
 #header #phone div
 {
     color:#5c5c5c;
-    font-size: 14px;
+    font-size: 24px;
 }
 #header #phone div span
 {
@@ -422,6 +422,10 @@ a:hover
 {
     font-size: 11px;
     color:#939393;
+}
+.hidden
+{
+    display: none;
 }
 div.new
 {
@@ -747,6 +751,8 @@ img.new
     width: 135px;
     float: left;
     margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .review_content {
     width: 520px;
