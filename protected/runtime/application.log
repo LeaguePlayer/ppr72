@@ -8400,3 +8400,1056 @@ Stack trace:
 REQUEST_URI=/portfolio
 HTTP_REFERER=http://ppr72.loc/review/index
 ---
+2014/04/14 12:44:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/a/amobile2/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /home/a/amobile2/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/a/amobile2/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/a/amobile2/framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/a/amobile2/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /home/a/amobile2/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /home/a/amobile2/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /home/a/amobile2/framework/db/ar/CActiveRecord.php(1455): CActiveRecord->getCommandBuilder()
+#7 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/SiteController.php(34): CActiveRecord->find(Array)
+#8 /home/a/amobile2/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#9 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/a/amobile2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2014/04/14 12:47:39 [error] [exception.CException] exception 'CException' with message 'Путь CAssetManager.basePath "/home/a/amobile2/ppr72.ru/public_html/assets" задан неверно. Удостоверьтесь, что директория существует и доступна для записи пользователю, под которым запущен веб-сервер.' in /home/a/amobile2/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/a/amobile2/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/a/amobile...')
+#1 /home/a/amobile2/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/a/amobile2/framework/web/CClientScript.php(510): CAssetManager->publish('/home/a/amobile...')
+#3 /home/a/amobile2/framework/web/CClientScript.php(547): CClientScript->getCoreScriptUrl()
+#4 /home/a/amobile2/framework/web/CClientScript.php(348): CClientScript->getPackageBaseUrl('jquery')
+#5 /home/a/amobile2/framework/web/CClientScript.php(208): CClientScript->renderCoreScripts()
+#6 /home/a/amobile2/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html>...')
+#7 /home/a/amobile2/framework/web/CController.php(788): CController->processOutput('<!DOCTYPE html>...')
+#8 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/SiteController.php(50): CController->render('index', Array)
+#9 /home/a/amobile2/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/a/amobile2/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('')
+#14 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/
+---
+2014/04/14 12:52:52 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'amobile2_ppr.reviews' doesn't exist. Выполнявшийся SQL-запрос: SHOW FULL COLUMNS FROM `reviews`.
+in /home/a/amobile2/ppr72.ru/public_html/protected/views/review/index.php (20)
+in /home/a/amobile2/ppr72.ru/public_html/protected/controllers/ReviewController.php (136)
+in /home/a/amobile2/ppr72.ru/public_html/index.php (13)
+2014/04/14 12:52:52 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "reviews", упомянутая в записи active record класса "Review", не найдена в базе данных.' in /home/a/amobile2/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /home/a/amobile2/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Review))
+#1 /home/a/amobile2/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /home/a/amobile2/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /home/a/amobile2/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /home/a/amobile2/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /home/a/amobile2/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /home/a/amobile2/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /home/a/amobile2/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /home/a/amobile2/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /home/a/amobile2/framework/web/CBaseController.php(147): CListView->init()
+#10 /home/a/amobile2/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /home/a/amobile2/ppr72.ru/public_html/protected/views/review/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /home/a/amobile2/framework/web/CBaseController.php(126): require('/home/a/amobile...')
+#13 /home/a/amobile2/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/a/amobile...', Array, true)
+#14 /home/a/amobile2/framework/web/CController.php(869): CBaseController->renderFile('/home/a/amobile...', Array, true)
+#15 /home/a/amobile2/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/ReviewController.php(136): CController->render('index', Array)
+#17 /home/a/amobile2/framework/web/actions/CInlineAction.php(49): ReviewController->actionIndex()
+#18 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /home/a/amobile2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /home/a/amobile2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /home/a/amobile2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /home/a/amobile2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /home/a/amobile2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /home/a/amobile2/framework/web/CController.php(291): CFilterChain->run()
+#25 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('')
+#27 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('review')
+#28 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/review
+HTTP_REFERER=http://ppr72.ru/
+---
+2014/04/14 16:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php:170
+Stack trace:
+#0 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php(54): NewsController->loadModel('1')
+#1 [internal function]: NewsController->actionView('1')
+#2 /home/a/amobile2/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#3 /home/a/amobile2/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#4 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/a/amobile2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/a/amobile2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/a/amobile2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/a/amobile2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/a/amobile2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/a/amobile2/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('news/view')
+#14 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/news/1
+---
+2014/04/15 03:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/15 03:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "administrator".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('administrator')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/administrator/
+---
+2014/04/15 03:38:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin.php
+---
+2014/04/15 04:12:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/15 04:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "administrator".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('administrator')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/administrator/
+---
+2014/04/15 04:12:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin.php
+---
+2014/04/15 04:25:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "yandex.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('yandex.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yandex.php
+---
+2014/04/16 09:11:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/admin".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/admin')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/admin/
+---
+2014/04/16 09:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/themes/.default/images/auth_pict.gif".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/themes/....')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/themes/.default/images/auth_pict.gif
+---
+2014/04/16 09:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/js/main/core/core.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/js/main/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/js/main/core/core.css
+---
+2014/04/16 09:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/themes/.default/adminstyles.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/themes/....')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/themes/.default/adminstyles.css
+---
+2014/04/16 09:11:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "node".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('node')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/node/
+---
+2014/04/16 09:11:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "user/password".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('user/password')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/password/
+---
+2014/04/16 09:11:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "modules/system/system.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('modules/system/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/modules/system/system.css
+---
+2014/04/16 09:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "modules/system/system.base.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('modules/system/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/modules/system/system.base.css
+---
+2014/04/16 09:11:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "media/system/js/mootools.js".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('media/system/js...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/media/system/js/mootools.js
+---
+2014/04/16 09:11:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "templates/system/css/system.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('templates/syste...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/templates/system/css/system.css
+---
+2014/04/16 09:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/style/MODxCarbon/images/misc/logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/style/MODxCarbon/images/misc/logo.png
+---
+2014/04/16 09:11:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/style/MODxCarbon/images/misc/login-logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/style/MODxCarbon/images/misc/login-logo.png
+---
+2014/04/16 09:11:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/script/mootools/mootools.js".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/script/mootools/mootools.js
+---
+2014/04/16 09:11:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/style/MODxCarbon/style.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/style/MODxCarbon/style.css
+---
+2014/04/16 09:11:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/
+---
+2014/04/16 09:11:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/templates/default/images/style/modx-logo-header.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/templat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/templates/default/images/style/modx-logo-header.png
+---
+2014/04/16 09:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/templates/default/images/restyle/headers.jpg".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/templat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/templates/default/images/restyle/headers.jpg
+---
+2014/04/16 09:11:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/templates/default/css/login-min.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/templat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/templates/default/css/login-min.css
+---
+2014/04/16 09:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/
+---
+2014/04/16 09:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin/skins/default/img/logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin/sk...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/skins/default/img/logo.png
+---
+2014/04/16 09:11:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin/skins/default/css/style.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin/sk...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/skins/default/css/style.css
+---
+2014/04/16 09:11:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin/skins/default/css/login.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin/sk...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/skins/default/css/login.css
+---
+2014/04/16 09:11:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "users/forget".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('users/forget')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/users/forget/
+---
+2014/04/16 09:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/cms/admin/mac/common/butterfly.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/cms/admi...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/cms/admin/mac/common/butterfly.png
+---
+2014/04/16 09:11:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "installed".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('installed')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/installed
+---
+2014/04/16 09:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "users/registrate".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('users/registrat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/users/registrate/
+---
+2014/04/16 09:11:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/content/sitetree".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/content/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/content/sitetree/
+---
+2014/04/16 09:11:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "styles/skins/mac/design/css/style.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('styles/skins/ma...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/styles/skins/mac/design/css/style.css
+---
+2014/04/16 09:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-admin".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-admin')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-admin/
+---
+2014/04/16 09:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-content".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-content')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-content/
+---
+2014/04/16 09:11:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-admin/images/wordpress-logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-admin/images...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-admin/images/wordpress-logo.png
+---
+2014/04/16 09:11:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/16 09:11:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-admin/css/wp-admin.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-admin/css/wp...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-admin/css/wp-admin.css
+---
+2014/04/16 11:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/16 11:54:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "administrator".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('administrator')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/administrator/
+---
+2014/04/16 11:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin.php
+---
+2014/04/16 19:39:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin.php
+---
+2014/04/16 19:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "administrator/index.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('administrator/i...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/administrator/index.php
+---
+2014/04/16 19:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/17 04:47:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "market.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('market.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/market.php
+---
+2014/04/18 03:00:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php:170
+Stack trace:
+#0 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php(54): NewsController->loadModel('2')
+#1 [internal function]: NewsController->actionView('2')
+#2 /home/a/amobile2/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#3 /home/a/amobile2/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#4 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/a/amobile2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/a/amobile2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/a/amobile2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/a/amobile2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/a/amobile2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/a/amobile2/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('news/view')
+#14 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/news/2
+---
+2014/04/18 14:21:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "portfolio".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolio')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portfolio
+---
+2014/04/18 14:51:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "yml/yandex.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('yml/yandex.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yml/yandex.php
+---
+2014/04/19 00:35:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "YKVRX/services/index/category/6".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('YKVRX/services/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/YKVRX/services/index/category/6
+---
+2014/04/19 00:35:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "TjXWc/services".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('TjXWc/services')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/TjXWc/services/19
+---
+2014/04/19 06:39:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/admin".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/admin')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/admin/
+---
+2014/04/19 06:39:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/themes/.default/images/auth_pict.gif".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/themes/....')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/themes/.default/images/auth_pict.gif
+---
+2014/04/19 06:39:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/js/main/core/core.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/js/main/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/js/main/core/core.css
+---
+2014/04/19 06:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "bitrix/themes/.default/adminstyles.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('bitrix/themes/....')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/bitrix/themes/.default/adminstyles.css
+---
+2014/04/19 06:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "node".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('node')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/node/
+---
+2014/04/19 06:39:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "user/password".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('user/password')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/password/
+---
+2014/04/19 06:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "modules/system/system.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('modules/system/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/modules/system/system.css
+---
+2014/04/19 06:39:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "modules/system/system.base.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('modules/system/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/modules/system/system.base.css
+---
+2014/04/19 06:39:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "media/system/js/mootools.js".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('media/system/js...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/media/system/js/mootools.js
+---
+2014/04/19 06:39:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "templates/system/css/system.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('templates/syste...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/templates/system/css/system.css
+---
+2014/04/19 06:39:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/style/MODxCarbon/images/misc/logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/style/MODxCarbon/images/misc/logo.png
+---
+2014/04/19 06:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/style/MODxCarbon/images/misc/login-logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/style/MODxCarbon/images/misc/login-logo.png
+---
+2014/04/19 06:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/script/mootools/mootools.js".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/script/mootools/mootools.js
+---
+2014/04/19 06:39:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/media/style/MODxCarbon/style.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/media/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/media/style/MODxCarbon/style.css
+---
+2014/04/19 06:39:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/
+---
+2014/04/19 06:39:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/templates/default/images/style/modx-logo-header.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/templat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/templates/default/images/style/modx-logo-header.png
+---
+2014/04/19 06:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/templates/default/images/restyle/headers.jpg".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/templat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/templates/default/images/restyle/headers.jpg
+---
+2014/04/19 06:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "manager/templates/default/css/login-min.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('manager/templat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/manager/templates/default/css/login-min.css
+---
+2014/04/19 06:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/
+---
+2014/04/19 06:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin/skins/default/img/logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin/sk...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/skins/default/img/logo.png
+---
+2014/04/19 06:39:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin/skins/default/css/style.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin/sk...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/skins/default/css/style.css
+---
+2014/04/19 06:39:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "netcat/admin/skins/default/css/login.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('netcat/admin/sk...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/netcat/admin/skins/default/css/login.css
+---
+2014/04/19 06:39:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "users/forget".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('users/forget')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/users/forget/
+---
+2014/04/19 06:40:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/cms/admin/mac/common/butterfly.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('images/cms/admi...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/cms/admin/mac/common/butterfly.png
+---
+2014/04/19 06:40:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "installed".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('installed')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/installed
+---
+2014/04/19 06:40:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "users/registrate".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('users/registrat...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/users/registrate/
+---
+2014/04/19 06:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/content/sitetree".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/content/s...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/content/sitetree/
+---
+2014/04/19 06:40:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "styles/skins/mac/design/css/style.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('styles/skins/ma...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/styles/skins/mac/design/css/style.css
+---
+2014/04/19 06:40:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-admin".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-admin')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-admin/
+---
+2014/04/19 06:40:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-content".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-content')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-content/
+---
+2014/04/19 06:40:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-admin/images/wordpress-logo.png".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-admin/images...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-admin/images/wordpress-logo.png
+---
+2014/04/19 06:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/19 06:40:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-admin/css/wp-admin.css".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-admin/css/wp...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-admin/css/wp-admin.css
+---
+2014/04/19 16:31:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php:170
+Stack trace:
+#0 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php(54): NewsController->loadModel('4')
+#1 [internal function]: NewsController->actionView('4')
+#2 /home/a/amobile2/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#3 /home/a/amobile2/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#4 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/a/amobile2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/a/amobile2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/a/amobile2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/a/amobile2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/a/amobile2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/a/amobile2/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('news/view')
+#14 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/news/4
+---
+2014/04/19 14:36:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/19 14:36:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "administrator/index.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('administrator/i...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/administrator/index.php
+---
+2014/04/19 14:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "oKcTp/notes".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('oKcTp/notes')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/oKcTp/notes/4
+---
+2014/04/19 16:10:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "shop/yandex_market".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('shop/yandex_mar...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/shop/yandex_market/
+---
+2014/04/19 21:47:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "auth/login".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('auth/login')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/auth/login
+---
+2014/04/19 23:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "portfolio".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolio')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portfolio
+---
+2014/04/19 23:41:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/document-domain.html".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/document-domain.html
+---
+2014/04/19 23:41:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "lib/fancybox/{href}".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('lib/fancybox/{h...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lib/fancybox/{href}
+---
+2014/04/19 23:41:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "mc.yandex.ru/watch/17177932".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('mc.yandex.ru/wa...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=//mc.yandex.ru/watch/17177932
+---
+2014/04/19 23:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/path/to/file.html".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/path/to/file.html
+---
+2014/04/19 23:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/jui/js/),e.extend(this,{_aspectRatio:!!n.aspectRatio,aspectRatio:n.aspectRatio,originalElement:this.element,_proportionallyResizeElements:[],_helper:n.helper||n.ghost||n.animate".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/jui/js/),e.extend(this,{_aspectRatio:!!n.aspectRatio,aspectRatio:n.aspectRatio,originalElement:this.element,_proportionallyResizeElements:[],_helper:n.helper||n.ghost||n.animate?n.helper||
+---
+2014/04/19 23:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/jui/js/).addClass(this._triggerClass).html(o==".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/jui/js/).addClass(this._triggerClass).html(o==
+---
+2014/04/19 23:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/jui/js/).html()),this.hasTitle||this.buttonElement.removeAttr(".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/jui/js/).html()),this.hasTitle||this.buttonElement.removeAttr(
+---
+2014/04/19 23:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/jui/js/).html(i).prependTo(o),f=(this.uiDialogButtonPane=e(".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/jui/js/).html(i).prependTo(o),f=(this.uiDialogButtonPane=e(
+---
+2014/04/19 23:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/jui/js/).html(this.buttonElement.find(".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/jui/js/).html(this.buttonElement.find(
+---
+2014/04/19 23:41:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/f97990ab/jui/js/,this.uiDialogTitlebar).html(".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/f97990ab...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/f97990ab/jui/js/,this.uiDialogTitlebar).html(
+---
+2014/04/19 23:47:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "portfolio".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolio')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portfolio
+HTTP_REFERER=http://ppr72.ru/category/index/type/pprs
+---
+2014/04/20 15:47:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "cZVYk/services/index/category/5".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('cZVYk/services/...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/cZVYk/services/index/category/5
+---
+2014/04/21 04:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "yml.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('yml.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yml.php
+---
+2014/04/21 11:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php:170
+Stack trace:
+#0 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php(54): NewsController->loadModel('1')
+#1 [internal function]: NewsController->actionView('1')
+#2 /home/a/amobile2/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#3 /home/a/amobile2/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#4 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/a/amobile2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/a/amobile2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/a/amobile2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/a/amobile2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/a/amobile2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/a/amobile2/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('news/view')
+#14 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/news/1
+---
+2014/04/21 14:20:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php:170
+Stack trace:
+#0 /home/a/amobile2/ppr72.ru/public_html/protected/controllers/NewsController.php(54): NewsController->loadModel('3')
+#1 [internal function]: NewsController->actionView('3')
+#2 /home/a/amobile2/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#3 /home/a/amobile2/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NewsController), Object(ReflectionMethod), Array)
+#4 /home/a/amobile2/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/a/amobile2/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/a/amobile2/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/a/amobile2/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/a/amobile2/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/a/amobile2/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/a/amobile2/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/a/amobile2/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/a/amobile2/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('news/view')
+#14 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/news/3
+---
+2014/04/21 15:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "wp-login.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('wp-login.php')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wp-login.php
+---
+2014/04/21 15:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "administrator/index.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('administrator/i...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/administrator/index.php
+---
+2014/04/21 15:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "portfolio".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolio')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portfolio
+---
+2014/04/21 21:20:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "portfolio".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('portfolio')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/portfolio
+---
+2014/04/22 04:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "upload/yandex.php".' in /home/a/amobile2/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/a/amobile2/framework/web/CWebApplication.php(141): CWebApplication->runController('upload/yandex.p...')
+#1 /home/a/amobile2/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/a/amobile2/ppr72.ru/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upload/yandex.php
+---

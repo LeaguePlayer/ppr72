@@ -1,5 +1,6 @@
 .idea
 uploads
 assets
+index.php
 protected/runtime
 protected/config/main.php
