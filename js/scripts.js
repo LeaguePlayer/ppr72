@@ -32,8 +32,6 @@ function next_slide()
                 $('.arrow_right').click();
             }
                 
-                
-                
             
         }
 }
@@ -44,6 +42,8 @@ function next_slide()
 $(document).ready(function(){
 
     $('.fancy_run').fancybox();
+    $('.works .fancybox').fancybox({
+        type: "image"});
     $('.fancy').fancybox({type:'ajax'});
     
     $('.faq .quest').toggle(function(){
