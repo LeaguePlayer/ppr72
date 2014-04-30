@@ -785,3 +785,39 @@ img.new
     height: 0px;
     clear: both;
 }
+
+.works {
+    margin: 0 0 35px 0;
+}
+.works h2 {
+    font-size: 22px; 
+    margin: 0 0 25px 0;
+    font-weight: lighter;
+}
+.works h3 {
+    font-size: 18px; 
+    padding: 0 0 0 52px;
+    margin: 0 0 18px 0;
+    background: url("/img/line.png") no-repeat left center;
+    font-weight: lighter;
+}
+.works .image {
+    width: 320px;
+    margin: 0 20px 25px 0;
+    float: left;
+}
+.works .text {
+    width: 300px;
+    margin: 0 0 25px 0;
+    float: left;
+    font-family: Arial;
+    font-size: 14px;
+}
+.works .images ul li {
+    display: inline-block; 
+    margin: 0 10px 10px 0;
+}
+.works .images ul li img {
+    display: block;
+    border-radius: 10px;
+}

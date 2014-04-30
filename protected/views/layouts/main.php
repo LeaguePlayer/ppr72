@@ -68,6 +68,7 @@
                             <li<?if(strpos($_SERVER['REQUEST_URI'],'/type/vektor')!==false){echo" class='current'";}?>><?=CHtml::link('Векторизация', array('/category/index/type/vektor'))?></li>                       
                         </ul>
                     </li>
+                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/works')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/works'))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/4')!==false){echo" class='current'";}?>><?=CHtml::link('Экспертиза ППРк', array('/notes/view', 'id'=>4))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/6')!==false){echo" class='current'";}?>><?=CHtml::link('Сертификаты', array('/notes/view', 'id'=>6))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/3')!==false){echo" class='current'";}?>><?=CHtml::link('Контакты', array('/notes/view', 'id'=>3))?></li>

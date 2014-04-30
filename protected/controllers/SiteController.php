@@ -142,6 +142,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		var_dump(Yii::app()->getModule('user')->getAdmins());die();
 		$model=new LoginForm;
 
 		// if it is ajax validation request
