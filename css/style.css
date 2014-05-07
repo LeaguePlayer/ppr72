@@ -821,3 +821,27 @@ img.new
     display: block;
     border-radius: 10px;
 }
+
+.icons {
+    font-size: 0px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+.icons .item {
+    font-size: 18px;
+    font-weight: lighter;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 50px 0 0;
+}
+.icons .item a {
+    font-size: 16px;
+    color: black;
+    vertical-align: middle;
+    display: inline-block;
+}
+.icons .item img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+}

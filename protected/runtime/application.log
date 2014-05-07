@@ -9415,3 +9415,56 @@ REQUEST_URI=/works/manage
 2014/04/30 09:20:21 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Works".
 in C:\os\OpenServer\domains\ppr.local\protected\controllers\WorksController.php (71)
 in C:\os\OpenServer\domains\ppr.local\index.php (13)
+2014/05/05 14:04:58 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Works".
+in C:\os\OpenServer\domains\ppr.local\protected\controllers\WorksController.php (71)
+in C:\os\OpenServer\domains\ppr.local\index.php (13)
+2014/05/05 14:05:08 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Works".
+in C:\os\OpenServer\domains\ppr.local\protected\controllers\WorksController.php (118)
+in C:\os\OpenServer\domains\ppr.local\index.php (13)
+2014/05/05 14:05:26 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Works".
+in C:\os\OpenServer\domains\ppr.local\protected\controllers\WorksController.php (118)
+in C:\os\OpenServer\domains\ppr.local\index.php (13)
+2014/05/07 13:56:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in C:\os\OpenServer\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\os\OpenServer\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#1 C:\os\OpenServer\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\os\OpenServer\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\os\OpenServer\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\os\OpenServer\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\os\OpenServer\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\os\OpenServer\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\os\OpenServer\framework\web\CWebApplication.php(282): CController->run('update')
+#8 C:\os\OpenServer\framework\web\CWebApplication.php(141): CWebApplication->runController('notes/update')
+#9 C:\os\OpenServer\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\os\OpenServer\domains\ppr.local\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/notes/update/2
+HTTP_REFERER=http://ppr.local/
+---
+2014/05/07 13:59:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "img/reviews.png".' in C:\os\OpenServer\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\os\OpenServer\framework\web\CWebApplication.php(141): CWebApplication->runController('img/reviews.png')
+#1 C:\os\OpenServer\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\os\OpenServer\domains\ppr.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/reviews.png
+HTTP_REFERER=http://ppr.local/
+---
+2014/05/07 14:07:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "reviews".' in C:\os\OpenServer\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\os\OpenServer\framework\web\CWebApplication.php(141): CWebApplication->runController('reviews')
+#1 C:\os\OpenServer\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\os\OpenServer\domains\ppr.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reviews/
+HTTP_REFERER=http://ppr.local/
+---
+2014/05/07 14:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "reviews".' in C:\os\OpenServer\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\os\OpenServer\framework\web\CWebApplication.php(141): CWebApplication->runController('reviews')
+#1 C:\os\OpenServer\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\os\OpenServer\domains\ppr.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reviews/
+HTTP_REFERER=http://ppr.local/
+---

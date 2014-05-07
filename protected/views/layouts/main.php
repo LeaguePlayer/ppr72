@@ -73,7 +73,7 @@
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/6')!==false){echo" class='current'";}?>><?=CHtml::link('Сертификаты', array('/notes/view', 'id'=>6))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/3')!==false){echo" class='current'";}?>><?=CHtml::link('Контакты', array('/notes/view', 'id'=>3))?></li>
                     <!--<li<?if(strpos($_SERVER['REQUEST_URI'],'/portfolio')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/portfolio'))?></li>-->
-                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/reviews')!==false){echo" class='current'";}?>><?=CHtml::link('Отзывы', array('/review'))?></li>
+                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/review')!==false){echo" class='current'";}?>><?=CHtml::link('Отзывы', array('/review'))?></li>
 
                 </ul>
             </div>
@@ -101,7 +101,7 @@
    <div id="footer">
    <div class="small_f">
         <div class="small_logo cufon">ПроектТехСервис<span>все права защищены</span></div>
-        <div id="copyright"><div id="c"><a href="http://asite-studio.ru" title="Создание сайта А-Сайт Тюмень"></a>Создание сайта</div></div>
+        <div id="copyright"><div id="c"><a href="http://amobile-studio.ru" title="Создание сайта А-Мобайл Тюмень"></a>Создание сайта</div></div>
         <div class="fast_phone"><span class="cufon">8-922-074-6770</span>ул. Станислава Карнацевича 14 кор.2 </div>
    </div>
    

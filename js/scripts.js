@@ -1,5 +1,6 @@
 Cufon.replace(".cufon");
 Cufon.replace("h2,h3,h1");
+Cufon.replace(".icons");
 Cufon.replace(".menu li a,.menu li.current a", {
         hover: true
 });
