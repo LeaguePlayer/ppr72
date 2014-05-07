@@ -176,7 +176,7 @@ class WorksController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Works');
-		$this->render('index',array(
+		$this->render('//works/index',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
