@@ -36,7 +36,7 @@
             <div id="logo_text" class="cufon"><div class="relative"><h1>ПроектТехСервис</h1><a href="/"></a></div></div>            
             <div id="callback"><a href="/site/feedback" class="fancy">Связаться с нами</a></div>            
             <div id="slogan" class="cufon">индивидуальный подход и тщательная проработка <span>каждого проекта</span></div>            
-            <div id="phone"><div class="cufon">8 (3452) 73-88-15</div>г. Тюмень, <br>ул. Станислава Карнацевича<br /> 14 кор.2</div>
+            <div id="phone"><div class="cufon">8 (3452) 73-88-15</div><!--г. Тюмень, <br>ул. Станислава Карнацевича<br /> 14 кор.2--></div>
         </div>
         <div id="slide_box">
             <div class="arrow_left"></div>
@@ -69,7 +69,7 @@
                         </ul>
                     </li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/works')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/works'))?></li>
-                    <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/4')!==false){echo" class='current'";}?>><?=CHtml::link('Экспертиза ППРк', array('/notes/view', 'id'=>4))?></li>
+                    <!--<li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/4')!==false){echo" class='current'";}?>><?=CHtml::link('Экспертиза ППРк', array('/notes/view', 'id'=>4))?></li>-->
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/6')!==false){echo" class='current'";}?>><?=CHtml::link('Сертификаты', array('/notes/view', 'id'=>6))?></li>
                     <li<?if(strpos($_SERVER['REQUEST_URI'],'/notes/3')!==false){echo" class='current'";}?>><?=CHtml::link('Контакты', array('/notes/view', 'id'=>3))?></li>
                     <!--<li<?if(strpos($_SERVER['REQUEST_URI'],'/portfolio')!==false){echo" class='current'";}?>><?=CHtml::link('Примеры работ', array('/portfolio'))?></li>-->
@@ -102,7 +102,7 @@
    <div class="small_f">
         <div class="small_logo cufon">ПроектТехСервис<span>все права защищены</span></div>
         <div id="copyright"><div id="c"><a href="http://amobile-studio.ru" title="Создание сайта А-Мобайл Тюмень"></a>Создание сайта</div></div>
-        <div class="fast_phone"><span class="cufon">8(3452)73-88-15</span>ул. Станислава Карнацевича 14 кор.2 </div>
+        <div class="fast_phone"><span class="cufon">8(3452)73-88-15</span><!--ул. Станислава Карнацевича 14 кор.2--> </div>
    </div>
    
    </div>
