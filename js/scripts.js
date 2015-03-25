@@ -43,6 +43,7 @@ function next_slide()
 $(document).ready(function(){
 
     $('.fancy_run').fancybox();
+	$('.fancybox').fancybox();
     $('.works .fancybox').fancybox({
         type: "image"});
     $('.fancy').fancybox({type:'ajax'});

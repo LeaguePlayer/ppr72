@@ -7,7 +7,7 @@
 
 	<div class="review_image">
         <? if($data->img): ?>
-            <img src="/uploads/reviews/<?=$data->id?>.jpg" width="135" alt=""/>
+            <a class="fancybox" href="/uploads/reviews/<?=$data->id?>.jpg"><img src="/uploads/reviews/<?=$data->id?>.jpg" width="135" alt=""/></a>
         <? else: ?>
             <img src="/uploads/reviews/no_img.jpg" width="135" alt=""/>
         <? endif; ?>
