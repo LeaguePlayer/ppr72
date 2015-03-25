@@ -102,7 +102,7 @@
    <div class="small_f">
         <div class="small_logo cufon">ПроектТехСервис<span>все права защищены</span></div>
         <div id="copyright"><div id="c"><a href="http://amobile-studio.ru" title="Создание сайта А-Мобайл Тюмень"></a>Создание сайта</div></div>
-        <div class="fast_phone"><span class="cufon">8-922-074-6770</span>ул. Станислава Карнацевича 14 кор.2 </div>
+        <div class="fast_phone"><span class="cufon">8(3452)73-88-15</span>ул. Станислава Карнацевича 14 кор.2 </div>
    </div>
    
    </div>
