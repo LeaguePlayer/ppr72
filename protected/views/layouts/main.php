@@ -36,7 +36,7 @@
             <div id="logo_text" class="cufon"><div class="relative"><h1>ПроектТехСервис</h1><a href="/"></a></div></div>            
             <div id="callback"><a href="/site/feedback" class="fancy">Связаться с нами</a></div>            
             <div id="slogan" class="cufon">индивидуальный подход и тщательная проработка <span>каждого проекта</span></div>            
-            <div id="phone"><div class="cufon">8-922-074-6770</div>г. Тюмень, <br>ул. Станислава Карнацевича<br /> 14 кор.2</div>
+            <div id="phone"><div class="cufon">8 (3452) 73-88-15</div>г. Тюмень, <br>ул. Станислава Карнацевича<br /> 14 кор.2</div>
         </div>
         <div id="slide_box">
             <div class="arrow_left"></div>
